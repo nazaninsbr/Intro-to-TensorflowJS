@@ -51,7 +51,7 @@ train().then(() => {
 
 async function train() {
     for(let i=0; i<100; i++){
-        const response = await model.fit(trainXs, trainYs);
+        const response = await model.fit(trainXs, trainYs, configFit);
         console.log(response.history.loss);
     }
 }
